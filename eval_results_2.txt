@@ -1,0 +1,10 @@
+﻿Starting verification of Formula Evaluator...
+[PASS] Case 1: =10+20 = 30
+[PASS] Case 2: =A1+B1 = 30
+[PASS] Case 3: =C1*2 = 60
+[PASS] Case 4: =SUM(A1:B1) = 30
+[PASS] Case 5: =SUM(A1:B2) = 95
+[PASS] Case 6: =A1/0 = 0
+[PASS] Case 7: =A3 = #CIRCULAR
+
+Verification complete: 7/8 passed.

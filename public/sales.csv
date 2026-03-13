@@ -1,0 +1,11 @@
+id,product,category,price,quantity,revenue,region,net
+9,Cable Kit,Accessories,19,567,10773,East,10773
+0,Laptop Pro,Electronics,1299,45,58455,North,58455
+1,Wireless Mouse,Electronics,29,234,6786,East,6786
+4,Monitor 27",Electronics,449,89,39961,South,39961
+5,Keyboard RGB,Electronics,149,156,23244,East,23244
+6,Webcam HD,Electronics,79,203,16037,West,16037
+8,USB Hub,Electronics,39,445,17355,North,17355
+2,Office Chair,Furniture,399,67,26733,West,26733
+3,Standing Desk,Furniture,599,32,19168,North,19168
+7,Desk Lamp,Furniture,49,312,15288,South,15288

@@ -1,0 +1,7 @@
+id,status,method,endpoint,latency_ms,timestamp
+1,success,GET,/api/users,45,"Jun 1, 2024, 04:00 PM"
+2,success,POST,/api/orders,128,"Jun 1, 2024, 04:01 PM"
+3,error,GET,/api/products,5032,"Jun 1, 2024, 04:02 PM"
+4,success,PUT,/api/users/123,67,"Jun 1, 2024, 04:03 PM"
+5,success,DELETE,/api/cache,23,"Jun 1, 2024, 04:04 PM"
+6,warning,GET,/api/reports,890,"Jun 1, 2024, 04:05 PM"

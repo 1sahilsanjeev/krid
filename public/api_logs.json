@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "status": "success",
+        "method": "GET",
+        "endpoint": "/api/users",
+        "latency_ms": 45,
+        "timestamp": "Jun 1, 2024, 04:00 PM"
+    },
+    {
+        "id": 2,
+        "status": "success",
+        "method": "POST",
+        "endpoint": "/api/orders",
+        "latency_ms": 128,
+        "timestamp": "Jun 1, 2024, 04:01 PM"
+    },
+    {
+        "id": 3,
+        "status": "error",
+        "method": "GET",
+        "endpoint": "/api/products",
+        "latency_ms": 5032,
+        "timestamp": "Jun 1, 2024, 04:02 PM"
+    },
+    {
+        "id": 4,
+        "status": "success",
+        "method": "PUT",
+        "endpoint": "/api/users/123",
+        "latency_ms": 67,
+        "timestamp": "Jun 1, 2024, 04:03 PM"
+    },
+    {
+        "id": 5,
+        "status": "success",
+        "method": "DELETE",
+        "endpoint": "/api/cache",
+        "latency_ms": 23,
+        "timestamp": "Jun 1, 2024, 04:04 PM"
+    },
+    {
+        "id": 6,
+        "status": "warning",
+        "method": "GET",
+        "endpoint": "/api/reports",
+        "latency_ms": 890,
+        "timestamp": "Jun 1, 2024, 04:05 PM"
+    }
+]
