@@ -899,8 +899,8 @@ export default function Canvas() {
                     return null;
                 })()}
 
-                {/* Center Content (Empty State) - Render only when no file is active and no files are uploaded */}
-                {!activeFile && files.length === 0 && (
+                {/* Center Content (Empty State) - Render only when no file is active and no user files are uploaded */}
+                {!activeFile && files.filter(f => !f.isDefault).length === 0 && (
                     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center pointer-events-none w-full">
                         <div className="flex flex-col items-center gap-4 max-w-lg text-center mt-[-10vh]">
                             {/* Central Icon Ring */}
@@ -920,7 +920,7 @@ export default function Canvas() {
                             </h2>
 
                             <p className="text-[14px] text-slate-400/80 dark:text-stone-400/80 font-normal mt-0.5">
-                                CSV, JSON, Parquet - your files becomes visible
+                                CSV, JSON, Parquet - your files become visible
                             </p>
 
                             <p className="text-[12px] text-slate-300 dark:text-stone-500 font-normal mt-2">

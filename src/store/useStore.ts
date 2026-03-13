@@ -120,6 +120,7 @@ export interface FileItem {
     x: number;
     y: number;
     children?: FileItem[];
+    isDefault?: boolean;
 }
 
 export interface QueryHistoryItem {
@@ -166,9 +167,9 @@ export interface PipelineSnapshot {
 }
 
 const mockFiles: FileItem[] = [
-    { id: 'sales', name: 'sales', tableName: 'sales', type: 'csv', rows: '1.2 KB', color: 'bg-emerald-100 text-emerald-600', x: 100, y: 100 },
-    { id: 'sample', name: 'sample', tableName: 'sample', type: 'csv', rows: '840 B', color: 'bg-emerald-100 text-emerald-600', x: 100, y: 230 },
-    { id: 'api_logs', name: 'api_logs', tableName: 'api_logs', type: 'json', rows: '420 B', color: 'bg-amber-100 text-amber-600', x: 100, y: 360 },
+    { id: 'sales', name: 'sales', tableName: 'sales', type: 'csv', rows: '1.2 KB', color: 'bg-emerald-100 text-emerald-600', x: 100, y: 100, isDefault: true },
+    { id: 'sample', name: 'sample', tableName: 'sample', type: 'csv', rows: '840 B', color: 'bg-emerald-100 text-emerald-600', x: 100, y: 230, isDefault: true },
+    { id: 'api_logs', name: 'api_logs', tableName: 'api_logs', type: 'json', rows: '420 B', color: 'bg-amber-100 text-amber-600', x: 100, y: 360, isDefault: true },
 ];
 
 interface AppState {
