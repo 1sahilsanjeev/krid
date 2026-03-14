@@ -35,7 +35,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                         </button>
                         <button
                             title="Contact Support"
-                            onClick={() => window.open('mailto:support@example.com')}
+                            onClick={() => window.open('mailto:sahilsanjeevoraon@gmail.com')}
                             className="p-1.5 hover:bg-stone-100 dark:hover:bg-white/10 rounded-md transition-colors text-stone-400 hover:text-stone-600 dark:hover:text-stone-300"
                         >
                             <MessageSquare size={15} />
