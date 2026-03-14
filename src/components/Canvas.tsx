@@ -157,6 +157,27 @@ const FileIcon = ({
     );
 };
 
+const OnboardingStep1 = () => {
+    return (
+        <div className="absolute bottom-6 right-[calc(24px+52px)] flex items-center z-[11000] pointer-events-none animate-in fade-in zoom-in duration-500">
+            {/* Pulsing Background Shade */}
+            <div className="absolute left-[-26px] top-1/2 -translate-y-1/2 w-[52px] h-[52px] rounded-full bg-indigo-300/40 animate-pulse z-0" style={{ animationDuration: '1s' }} />
+
+            {/* Static Cursor Icon */}
+            <div className="relative z-20 flex-shrink-0 w-[52px] h-[52px] flex items-center justify-center mr-[-26px]">
+                <MousePointer2 className="w-[20px] h-[20px] text-[#222] fill-[#222] stroke-white stroke-[2px] ml-0.5 mt-0.5" />
+            </div>
+
+            {/* Tooltip Text Bar */}
+            <div className="relative z-10 bg-white dark:bg-slate-900 pl-[32px] pr-[12px] h-[40px] rounded-[10px] shadow-[0_4px_16px_rgba(0,0,0,0.06)] border border-slate-200/60 dark:border-slate-800/60 ml-[-4px] whitespace-nowrap flex items-center justify-center">
+                <p className="text-[#334155] dark:text-slate-100 font-normal text-[15px] tracking-[0.015em]">
+                    Click here to auto-layout your canvas
+                </p>
+            </div>
+        </div>
+    );
+};
+
 export default function Canvas() {
     const {
         isLoading,
@@ -177,6 +198,7 @@ export default function Canvas() {
         loadSchema,
         appTheme,
         showOnboarding,
+        onboardingStep,
         nextOnboardingStep
     } = useStore();
     const [isPanning, setIsPanning] = useState(false);
@@ -1018,15 +1040,19 @@ export default function Canvas() {
                             </div>
                         </button>
 
-                        {/* Rearrange (Grid) */}
                         <button
-                            className="w-8 h-8 flex items-center justify-center hover:bg-stone-50 dark:hover:bg-white/10 rounded-xl text-stone-500 dark:text-stone-400 transition-colors active:scale-95"
+                            className={`w-8 h-8 flex items-center justify-center hover:bg-stone-50 dark:hover:bg-white/10 rounded-xl text-stone-500 dark:text-stone-400 transition-colors active:scale-95 transition-all duration-300 ${onboardingStep === 1 ? 'z-50 border-indigo-500 shadow-[0_0_15px_rgba(99,102,241,0.5)] ring-2 ring-indigo-500/20' : ''}`}
                             title="Rearrange Layout"
                             aria-label="Rearrange Layout"
-                            onClick={() => { rearrangeLayout(); }}
+                            onClick={() => {
+                                if (onboardingStep === 1) nextOnboardingStep();
+                                rearrangeLayout();
+                            }}
                         >
                             <LayoutGrid size={16} strokeWidth={2} />
                         </button>
+
+                        {onboardingStep === 1 && <OnboardingStep1 />}
 
                         {/* Collapse / More (Triangle Up -> Down) */}
                         <button
