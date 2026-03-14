@@ -900,7 +900,7 @@ export default function Canvas() {
                 })()}
 
                 {/* Center Content (Empty State) - Render only when no file is active and no user files are uploaded */}
-                {!activeFile && files.filter(f => !f.isDefault).length === 0 && (
+                {!activeFile && files.filter(f => f.id !== 'sales' && f.id !== 'sample' && f.id !== 'api_logs').length === 0 && (
                     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center pointer-events-none w-full">
                         <div className="flex flex-col items-center gap-4 max-w-lg text-center mt-[-10vh]">
                             {/* Central Icon Ring */}
